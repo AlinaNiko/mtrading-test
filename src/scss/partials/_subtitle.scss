@@ -1,0 +1,11 @@
+@import "variables";
+
+.subtitle {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $paleViolet;
+}

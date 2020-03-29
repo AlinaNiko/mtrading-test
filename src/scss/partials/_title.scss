@@ -1,0 +1,14 @@
+@import "variables";
+
+.title {
+  display: block;
+  font-weight: 200;
+  font-size: 41px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-family: $GothamPro;
+  
+  &--white {
+    color: $white;
+  }
+}

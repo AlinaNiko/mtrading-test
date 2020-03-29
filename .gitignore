@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+.vscode/
+*.ai
+*.psd
+*.pdf
+*.log
+Thumbs.db

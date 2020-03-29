@@ -1,0 +1,129 @@
+@import "variables";
+
+.quick-start {
+  padding: 120px 0 185px;
+  background-color: rgba(228, 199, 224, 0.05);
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 75px 0;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__left-column {
+    max-width:  280px;
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__right-column {
+    position: relative;
+    width: 100%;
+    max-width: 443px;
+    margin-right: -80px;
+    transition: all .5s ease-out;
+
+    @media (max-width: 992px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: auto;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    min-height: 396px;
+    overflow: hidden;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__toggle-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__toggle {
+    display: block;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    border: 5px solid $violet;
+    background-color: $paleViolet;
+    cursor: pointer;
+    box-sizing: initial;
+  }
+
+  &__toggle:not(:first-of-type) {
+    margin-top: 8px;
+  }
+
+  &__title {
+    padding-top: 50px;
+    max-width: 280px;
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      padding-top: 0;
+    }
+  }
+
+  &__paragraph {
+    max-width: 180px;
+    margin-top: 40px;
+    @media (max-width: 768px) {
+      margin: 40px auto 0;
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+    @media (max-width: 768px) {
+      margin: 50px auto 0;
+    }
+  }
+}
+
+#slide1:checked ~ .quick-start__toggle-wrapper .quick-start__toggle[for="slide1"],
+#slide2:checked ~ .quick-start__toggle-wrapper .quick-start__toggle[for="slide2"],
+#slide3:checked ~ .quick-start__toggle-wrapper .quick-start__toggle[for="slide3"],
+#slide4:checked ~ .quick-start__toggle-wrapper .quick-start__toggle[for="slide4"] {
+  background-color: $white;
+}
+
+#slide1:checked ~ .quick-start__slider .quick-start__slide--first,
+#slide2:checked ~ .quick-start__slider .quick-start__slide--second,
+#slide3:checked ~ .quick-start__slider .quick-start__slide--third,
+#slide4:checked ~ .quick-start__slider .quick-start__slide--fourth {
+  opacity: 1;
+}

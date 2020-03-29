@@ -1,0 +1,31 @@
+@import "variables";
+
+.button {
+  display: block;
+  min-width: 90px;
+  max-width: 128px;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size:  8px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  border: none;
+  border-radius: 50px;
+  background: $violet linear-gradient(0deg, $violet 0%, $purple 48%, $pink 100%) no-repeat;
+  box-shadow: 0 0 35px 0 $pink;
+  transition: all .3s ease-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 35px 10px $pink;
+    outline: none;
+  }
+
+  &:active {
+    background: $pink linear-gradient(0deg, $pink 0%, $purple 48%, $violet 100%) no-repeat;
+    outline: none;
+  }
+}

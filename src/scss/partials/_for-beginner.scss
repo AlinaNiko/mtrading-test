@@ -1,0 +1,57 @@
+@import "variables";
+
+.for-beginner {
+  padding: 160px 0 90px;
+  background: $white url("../images/for-beginner-background.jpg") center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  @media (min-width: 1500px) {
+    background-size: contain;
+  }
+
+  @media (max-width: 768px) {
+    padding: 75px 0;
+  }
+
+
+  &__container {
+    position: relative;
+  }
+
+  &__container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 313px;
+    height: 332px;
+    background: url("../images/for-beginner-image.png") no-repeat;
+    background-size: contain;
+    transition: all .5s ease-out;
+    z-index: 0;
+
+    @media (max-width: 645px) {
+      opacity: 0.1;
+    }
+  }
+
+  &__title {
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+  }
+
+  &__paragraph {
+    position: relative;
+    max-width: 310px;
+    margin-top: 40px;
+    z-index: 1;
+  }
+
+  &__button {
+    position: relative;
+    margin-top: 60px;
+    z-index: 1;
+  }
+}

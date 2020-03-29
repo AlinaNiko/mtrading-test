@@ -1,0 +1,81 @@
+@import "variables";
+
+.main-header {
+  background: #302138 url("../images/main-header-background.jpg") no-repeat;
+  background-size: cover;
+  color: $white;
+  overflow-x: hidden;
+
+  &__container {
+    position: relative;
+    padding: 70px 15px 200px;
+
+    @media (max-width:768px) {
+      padding: 75px 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: -120px;
+      width: 558px;
+      height: 525px;
+      background: url("../images/main-header-man.jpg.png") no-repeat;
+      background-size: contain;
+      z-index: 0;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__logo-wrapper {
+    max-width: 128px;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 420px;
+    margin-top: 134px;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      margin: 70px auto 0;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &__strong-title {
+    display: block;
+  }
+
+  &__paragraph {
+    margin-top: 45px;
+    font-size: 12px;
+  }
+
+  &__button {
+    margin-top: 45px;
+    max-width: 90px;
+
+    @media (max-width: 768px) {
+      margin: 45px auto 0;
+    }
+  }
+}
