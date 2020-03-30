@@ -8,6 +8,9 @@ let gulp = require("gulp"),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
+const ghPages = require("gh-pages");
+const pathPages = require("path");
+
 let path = {
     build: {
       html: "build/",
@@ -97,3 +100,11 @@ function build(cb) {
 
 exports.build = build;
 exports.default = gulp.series(build, gulp.parallel(watcher, webserver));
+
+
+
+function deploy(cb) {
+  ghPages.publish(pathPages.join(process.cwd(), "./build"), cb);
+}
+
+exports.deploy = deploy;
